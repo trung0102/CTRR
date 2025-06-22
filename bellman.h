@@ -13,6 +13,6 @@ using namespace std;
 void BF(int edgeList[][3], int numEdges, char start, int BFValue[], int BFPrev[]);
 
 
-void BF_Path(int edgeList[][3], int numEdges, char start, char end);
+string BF_Path(int edges[][3], int numEdges, char start, char goal);
 
 #endif

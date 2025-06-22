@@ -26,8 +26,8 @@ int main()
     
     bool randGen=false;
     int edgeList[MAX][3] ;
-    int numEdges=40;
-    int numVertices=10;
+    int numEdges=10;
+    int numVertices=6;
     int initlimit=15;
     if(!randGen){
         //Read from file
@@ -52,12 +52,57 @@ int main()
     
     switch(func){
         case bf:{
-            int BFValue[50];
-            int BFPrev[50];
+            int BFValue[numVertices];
+            int BFPrev[numVertices];
             char start_vertices=edgeList[0][0];
-            cout<<"================================================"<<endl;
-            cout<<start_vertices<<endl;
+            for(int i=0; i<numVertices; ++i){
+                BFValue[i] = -1;
+            }
             BF(edgeList,numEdges,start_vertices,BFValue,BFPrev);
+            cout<<"BFValue: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFValue[i]<<" ";
+            }
+            cout<<"BFPrev: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFPrev[i]<<" ";
+            }
+            BF(edgeList,numEdges,start_vertices,BFValue,BFPrev);
+            cout<<endl<<"BFValue2: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFValue[i]<<" ";
+            }
+            cout<<"BFPrev2: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFPrev[i]<<" ";
+            }
+            BF(edgeList,numEdges,start_vertices,BFValue,BFPrev);
+            cout<<endl<<"BFValue3: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFValue[i]<<" ";
+            }
+            cout<<"BFPrev3: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFPrev[i]<<" ";
+            }
+            BF(edgeList,numEdges,start_vertices,BFValue,BFPrev);
+            cout<<endl<<"BFValue4: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFValue[i]<<" ";
+            }
+            cout<<"BFPrev4: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFPrev[i]<<" ";
+            }
+            BF(edgeList,numEdges,start_vertices,BFValue,BFPrev);
+            cout<<endl<<"BFValue5: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFValue[i]<<" ";
+            }
+            cout<<"BFPrev5: ";
+            for(int i=0; i<10; ++i){
+                cout<< BFPrev[i]<<" ";
+            }
             break;
         }
             
